@@ -15,11 +15,47 @@ Quick-Reference
 
 .. code-block:: python
 
-    income = (gross_wages
+    income = (  gross_wages
               + taxable_interest
               + (dividends - qualified_dividends)
               - ira_deduction
-              - student_loan_interest)
+              - student_loan_interest
+             )
+
+* Also note the alignment of brackets in the above example. To elaborate further:
+
+.. code-block:: python
+
+    T_ls = (  energy
+            - density * p1_bulk**2
+            - density * p2_bulk**2
+            - density * p3_bulk**2
+           ) / density
+
+The above is an acceptable format. Do NOT use this:
+
+    T_ls = (  energy
+            - density * p1_bulk**2
+            - density * p2_bulk**2
+            - density * p3_bulk**2) / density
+
+* While PEP-8 recommends that assignment operations have a single space between variables and the equal to(`=`) sign, we recommend that you vertically align all the equal to signs like this:
+
+.. code-block:: python
+
+    pl.rcParams['figure.figsize']  = 12, 7.5
+    pl.rcParams['figure.dpi']      = 300
+    pl.rcParams['image.cmap']      = 'jet'
+    pl.rcParams['lines.linewidth'] = 1.5
+
+Do NOT use this:
+
+.. code-block:: python
+
+    pl.rcParams['figure.figsize'] = 12, 7.5
+    pl.rcParams['figure.dpi'] = 300
+    pl.rcParams['image.cmap'] = 'jet'
+    pl.rcParams['lines.linewidth'] = 1.5
 
 * Surround top-level function and class definitions with two blank lines.
 * Method definitions inside a class are surrounded by a single blank line.
